@@ -4,21 +4,21 @@ class App < Sinatra::Base
   # Write your code here!
 
   get '/reversename/:name' do 
-    @name = params[:name].reverse
-    "#{@name}"
+    #@name = params[:name].reverse
+    "#{params[:name].reverse}"
   end
 
   get '/square/:number' do 
     @num = params[:number].to_i 
-    @num = (@num**2).to_s
-    "#{@num}"
+    #@num = (@num**2).to_s
+    "#{(@num**2).to_s}"
   end
 
   get '/say/:number/:phrase' do   #repeats the phrase as a string by :number
     @num = params[:number].to_i 
     @phrase = params[:phrase]
-    @output = @phrase * @num
-    "#{@output}"
+    #@output = @phrase * @num
+    "#{@phrase * @num}"
   end
 
   get '/say/:word1/:word2/:word3/:word4/:word5' do 
